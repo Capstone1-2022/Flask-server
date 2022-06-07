@@ -44,9 +44,10 @@ if __name__ == '__main__':
 ```
 nohup python3 -u app.py &
 ```
-> 앱이 잘 실행되고 있는지 확인할 수 있는 명령어들
+> 앱이 잘 실행되고 있는지 확인 및 종료할 수 있는 명령어
 ```
 ps -aux|grep python3 (실행중인 프로세스 확인 명령어)
 tail -f nohup.out (로그 확인 명령어)
+kill -9 프로세스-번호 (앱 종료 명령어)
 ```
 <br>
