@@ -12,6 +12,12 @@ http://3.35.218.28:5000/
 ssh -i "키파일이름" ubuntu@ec2-000-000-000-000.compute-1.amazonaws.com
 ```
 
+## VSCode에서 EC2 접속하는 방법
+- [링크](https://deepmal.tistory.com/8) 참고하여 진행
+- `ForwardAgent`는 작성할 필요 없음
+- 홈 디렉토리의 .ssh 폴더 내부에 pem 키파일을 위치시킬 것
+- User 는 반드시 `ubuntu` 라고 작성해야 함
+
 ## Flask 웹서버 실행 방법
 > Flask 앱을 실행하기 위한 라이브러리 설치하기
 ```
@@ -42,10 +48,4 @@ nohup python3 -u app.py &
 ps -aux|grep python3 (실행중인 프로세스 확인 명령어)
 tail -f nohup.out (로그 확인 명령어)
 ```
-
-## VSCode에서 EC2 접속하는 방법
-- [링크](https://deepmal.tistory.com/8) 참고하여 진행
-- `ForwardAgent`는 작성할 필요 없음
-- 홈 디렉토리의 .ssh 폴더 내부에 pem 키파일을 위치시킬 것
-- User 는 반드시 `ubuntu` 라고 작성해야 함
 <br>
