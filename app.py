@@ -1,8 +1,14 @@
+import text_detect
+import crop_avatars
+import myresnet.load_resnet
+import word_cloud
+
 from web_codes import save_file
 from web_codes import video_to_imgs
-import crop_avatars
-
+from myresnet.load_resnet import *
+from text_detect import *
 from flask import Flask, render_template, request
+from word_cloud import *
 
 app = Flask(__name__)
 
@@ -30,18 +36,31 @@ def analysis():
         crop_avatars.run(img_num)
 
         # Cropped 이미지 데이터에서 특징점 추출 및 Clustering
-        exec(open("resnet/load_resnet.py").read())
+        origin = myresnet.load_resnet.run()
+        count = origin - 1
 
-        # 유저 아바타와 접촉한 타 아바타 개수와 그에 비례하는 리워드 금액 반환
+        # Cropped 이미지 데이터에서 닉네임 Detection 및 Clustering
+        text_count = text_detect.run()
+        word_cloud.run()
+        
 
-        return render_template('complete.html', video=video_path)
+        # 유저 아바타와 접촉한 타 아바타 개수와 그에 비례하는 리워드 금액 반환(1명당 50원)
+        estimate = round((text_count + count)/2)
+        reward = estimate * 50
+
+        return render_template('complete.html', video=video_path, count=count, origin=origin, reward=reward, text_count=text_count, estimate=estimate)
 
 # 동영상 분석 결과(Clustering 결과 그래프) 반환 함수
 @app.route('/result', methods=['POST'])
 def result():
     if request.method == "POST":
         video = request.form.get('video')
-        return render_template('result.html', video=video)
+        count = request.form.get('count')
+        origin = request.form.get('origin')
+        text_count = request.form.get('text_count')
+        estimate = request.form.get('estimate')
+        reward = request.form.get('reward')
+        return render_template('result.html', video=video, count=count, origin=origin, text_count=text_count, estimate=estimate, reward=reward)
 
 if __name__=="__main__":
   app.run(host='0.0.0.0')
