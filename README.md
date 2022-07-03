@@ -1,6 +1,3 @@
-# Flask 앱 실행하기
-<br>
-
 ## 코드 Clone 받기
 - `git clone https://github.com/Capstone1-2022/Flask-server.git`
 <br>
