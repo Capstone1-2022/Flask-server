@@ -1,4 +1,4 @@
-# Flask-server
+# Flask 앱 EC2 서버에 배포하기
 
 ## EC2 서버 접속 방법
 - AWS 사이트에서 EC2 서버 오픈, pem 키파일 다운로드
