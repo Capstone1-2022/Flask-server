@@ -10,7 +10,11 @@ from torchvision.transforms import transforms
 
 import sklearn
 from sklearn import manifold
+
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+
 from typing import Text
 from sklearn.cluster import MeanShift, estimate_bandwidth
 from itertools import cycle

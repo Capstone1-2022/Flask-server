@@ -41,11 +41,13 @@ def analysis():
 
         # Cropped 이미지 데이터에서 닉네임 Detection 및 Clustering
         # text_count = text_detect.run()
+        text_count = 0
         word_cloud.run()
         
 
         # 유저 아바타와 접촉한 타 아바타 개수와 그에 비례하는 리워드 금액 반환(1명당 50원)
-        estimate = round((text_count + count)/2)
+        # estimate = round((text_count + count)/2)
+        estimate = count
         reward = estimate * 50
 
         return render_template('complete.html', video=video_path, count=count, origin=origin, reward=reward, text_count=text_count, estimate=estimate)
@@ -63,4 +65,5 @@ def result():
         return render_template('result.html', video=video, count=count, origin=origin, text_count=text_count, estimate=estimate, reward=reward)
 
 if __name__=="__main__":
-  app.run(host='0.0.0.0')
+    app.run(debug=True)
+    # app.run(host='0.0.0.0')

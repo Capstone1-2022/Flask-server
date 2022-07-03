@@ -1,6 +1,5 @@
 from wordcloud import WordCloud
 from collections import Counter
-import matplotlib.pyplot as plt
 
 def run():
     text = open('nickname.txt').read()
