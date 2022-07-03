@@ -24,7 +24,7 @@ sudo apt install python3-pip
 ```
 > github 레포 git clone 또는 vscode를 이용하여 Flask 패키지를 서버에 올리기
 
-> 개인 프로젝트에 필요한 라이브러리 설치하기
+> Flask 서버 실행에 필요한 라이브러리 설치하기
 ```
 pip3 install -r requirements.txt
 ```
