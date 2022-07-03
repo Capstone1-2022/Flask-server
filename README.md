@@ -14,7 +14,7 @@ ssh -i "키파일이름" ubuntu@ec2-000-000-000-000.compute-1.amazonaws.com
    - User 는 반드시 `ubuntu` 라고 작성해야 함
 <br>
 
-## Flask 웹서버 실행 방법
+## Flask 웹서버 배포 방법
 > 리눅스 서버에 Flask 앱을 실행하기 위한 라이브러리 설치하기
 ```
 sudo apt update
@@ -35,7 +35,8 @@ pip3 install -r requirements.txt
 if __name__ == '__main__':
         app.run(host='0.0.0.0')
 ```
-> Flask 앱 백그라운드에서 실행하기
+
+## Flask 앱 백그라운드에서 실행하기
 ```
 nohup python3 -u app.py &
 ```
