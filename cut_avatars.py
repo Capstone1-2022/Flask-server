@@ -53,12 +53,12 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None , model=
         box_location = det_boxes[i].tolist()
         crop_path="static/detection/crop/" + str(num) + "-crop_" + str(i).zfill(3) + ".jpg"
         nickname_path="static/detection/nickname/" + str(num) + "-crop_" + str(i).zfill(3) + ".jpg"
-        # 좌하우상
+        # 아바타 이미지 잘라내기
         cropped = annotated_image.crop([box_location[0]-5,box_location[1]-5,box_location[2]+5,box_location[3]+5])
         cropped.save(crop_path,"JPEG")
-
-        nickname_cropped = annotated_image.crop([box_location[0]-20,box_location[1]-100,box_location[2]+20,box_location[3]-150])
-        nickname_cropped.save(nickname_path,"JPEG")
+        # 아바타 닉네임 이미지 잘래내기
+        # nickname_cropped = annotated_image.crop([box_location[0]-20,box_location[1]-100,box_location[2]+20,box_location[3]-150])
+        # nickname_cropped.save(nickname_path,"JPEG")
 
     for i in range(det_boxes.size(0)):
         if suppress is not None:

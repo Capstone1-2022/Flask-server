@@ -40,7 +40,7 @@ def analysis():
         count = origin - 1
 
         # Cropped 이미지 데이터에서 닉네임 Detection 및 Clustering
-        text_count = text_detect.run()
+        # text_count = text_detect.run()
         word_cloud.run()
         
 

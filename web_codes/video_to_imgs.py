@@ -13,12 +13,12 @@ def run(video):
     for file in os.scandir("./static/detection/crop"):
         os.remove(file.path)
     
-    for file in os.scandir("./static/detection/nickname"):
-        if(os.path.isfile(file.path)):
-            os.remove(file.path)
+    # for file in os.scandir("./static/detection/nickname"):
+    #     if(os.path.isfile(file.path)):
+    #         os.remove(file.path)
 
-    for file in os.scandir("./static/detection/nickname/box"):
-        os.remove(file.path)
+    # for file in os.scandir("./static/detection/nickname/box"):
+    #     os.remove(file.path)
 
     # 새 파일 저장 시작
     video = cv2.VideoCapture(video)
