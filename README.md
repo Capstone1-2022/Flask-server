@@ -1,7 +1,7 @@
 # Flask 앱 실행하기
 
 ## Flask-server 폴더 안에서 가상환경 설치
-- `pip install virtualenv` (가상환경 설치)
+- `pip3 install virtualenv` (가상환경 설치)
 - `source venv/bin/activate` (가상환경 활성화)(mac 명령어)
 <br>
 
