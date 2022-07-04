@@ -3,6 +3,8 @@
 
 > [프로젝트 소개 페이지 바로가기](http://cscp2.sogang.ac.kr/CSE4186/index.php/%EC%A1%B0%EA%B9%80%EC%9E%A5%EC%9D%B4)
 
+<br>
+
 ## 코드 Clone 받기
 - `git clone https://github.com/Capstone1-2022/Flask-server.git`
 <br>
