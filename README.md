@@ -1,6 +1,3 @@
-# Flask 서버 로컬에서 실행시키는 법
-<br>
-
 ## 코드 Clone 받기
 - `git clone https://github.com/Capstone1-2022/Flask-server.git`
 <br>
@@ -20,3 +17,8 @@
 - `python3 app.py` (맨 처음에는 시간 소요)
 - `http://127.0.0.1:5000/` 접속하여 로컬 서버 사용 가능
 <br>
+
+## 참고사항
+```
+DB 연결이 끊어짐에 따라 비디오 및 이미지 파일은 모두 static 폴더 내부에 저장됩니다.
+```
