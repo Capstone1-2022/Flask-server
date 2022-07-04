@@ -1,3 +1,6 @@
+# Flask 서버 로컬에서 실행시키는 법
+<br>
+
 ## 코드 Clone 받기
 - `git clone https://github.com/Capstone1-2022/Flask-server.git`
 <br>
